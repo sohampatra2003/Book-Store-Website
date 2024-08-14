@@ -9,7 +9,13 @@ const order = require("./routes/order");
 require("dotenv").config();
 
 const PORT = process.env.PORT || 1000;
-app.use(cors());
+app.use(cors(
+  {
+    origin: ["https://deploy-BookStore-Website.vercel.app"],
+    methods: ["POST", "GET"],
+    credentials: true
+  }
+));
 app.use(express.json());
 
 //Connection
