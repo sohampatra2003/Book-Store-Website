@@ -22,7 +22,7 @@ app.use(express.json());
 require("./conn/conn");
 
 //Calling Routes
-app.get('/hello',()=>{
+app.get('/',(req,res)=>{
   res.json({"HELLO WORLD":hi})
 })
 app.use("/api/v1", user);
