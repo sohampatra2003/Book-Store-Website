@@ -16,6 +16,9 @@ app.use(express.json());
 require("./conn/conn");
 
 //Calling Routes
+app.get('/hello',()=>{
+  res.json({"HELLO WORLD":hi})
+})
 app.use("/api/v1", user);
 app.use("/api/v1", book);
 app.use("/api/v1", cart);
